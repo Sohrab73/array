@@ -1,0 +1,324 @@
+//1 number.....
+/*#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int n;
+    cout<<"enter the number of n = ";
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cout<<"arr["<<i<<"]=";
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+//3 number.......
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[100];
+    double n;
+
+    cout<<"enter the number of n = ";
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cout<<"arr["<<i<<"]=";
+        cin>>arr[i];
+    }
+    double sum=0,count=0;
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+        count++;
+        sum=sum+arr[i];
+    }
+    cout<<endl<<"sum is ="<<sum<<endl;
+    double ave;
+    ave=sum/count;
+    cout<<"average is = "<<ave;
+}
+//04 solved........
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int arr[10], n;
+
+    cout << "Enter the size of the array : ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++){
+        cout<<"arr["<<i<<"]=";
+        cin >> arr[i];
+    }
+    int max = arr[0];
+    for (int i = 0; i < n; i++){
+       // max = arr[0];
+        if (max < arr[i])
+        max = arr[i];
+    }
+
+    int min = arr[0];
+    for (int i = 0; i < n; i++){
+       // min = arr[0];
+        if (min > arr[i])
+        min = arr[i];
+    }
+    cout << "largest element : " << max<<endl;
+    cout << "Smallest element : " << min;
+
+    return 0;
+}
+//05 solved.....
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int n;
+    cout<<"enter the number of n = ";
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cout<<"arr["<<i<<"]=";
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    for(int i=0;i<n;i++){
+      for(int i=0;i<n-1;i++){
+            if(arr[i]<arr[i+1]){
+            int a=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=a;
+        }
+            }
+
+    }
+    cout<<"after descending :";
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+        cout<<"2nd last : "<<arr[1]<<" ";
+
+}
+//06 solved.....
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int num,odd=0,even=0;
+    cout<<"Enter size of the array = ";
+    cin>>num;
+    for(i=0; i<size; i++)
+    {
+        cout<<"Enter the element arr["<<i<<"] :";
+        cin>>arr[i];
+    }
+    for(int i=0; i<num; i++)
+    {
+        if(arr[i]%2==0)
+        {
+            even++;
+        }
+        else{
+            odd++;
+        }
+    }
+    cout<<"Total even numbers of an array :"<<even<<"\n";
+    cout<<"Total odd numbers of an array : "<<odd;
+
+    return 0;
+}
+//07 solved.....
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a[100],n,zero=0,pos=0,neg=0;
+
+  cout<<"enter The Size of an array = ";
+  cin>>n;
+
+  cout<<"Enter The Element :\n";
+  for(int i=0;i<n;i++){
+     cout<<"arr["<<i<<"]=";
+     cin>>a[i];
+  }
+  cout<<"Element in Array is Given Below\n";
+  for(int i=0;i<n;i++){
+     if(a[i]>0){
+        pos++;
+     }
+     else if(a[i]<0){
+        neg++;
+     }
+     else{
+        zero++;
+     }
+  }
+  cout<<"positive No. is = "<<pos<<endl;
+  cout<<"negative No. is = "<<neg<<endl;
+  cout<<"total Zero in array is = "<<zero<<endl;
+   return 0;
+}
+//08 solved.....
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    int arr1[100],arr2[100];
+    int n;
+    cout<<"enter the number = ";
+    cin>>n;
+    for(int i=0;i<n;i++){
+        arr1[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr1[i]<<" ";
+    }
+    cout<<endl;
+    for(int i=0;i<n;i++){
+        arr2[i]=arr1[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr2[i]<<" ";
+    }
+}
+//11 solved.....
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+   int a[10],b[10],c[20],n;
+   cout<<"enter the number =";
+   cin>>n;
+   cout<<"Enter Elements in 1st Array: ";
+   for(int i=0;i<n;i++){
+      cin>>a[i];
+   }
+   cout<<"Enter Elements in 2nd Array: ";
+   for(int i=0;i<n;i++){
+      cin>>b[i];
+   }
+   cout<<"\nElements of Array After Merge: ";
+   for(int i=0;i<n;i++){
+      c[i]=a[i];
+      c[i+n]=b[i];
+   }
+   for(int i=0;i<n+n;i++){
+      cout<<c[i]<<" ";
+   }
+ }
+//12 solved.......
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    int n,add1[100],add2[100],sum[100];
+    cout<<"enter the number =";
+    cin>>n;
+    cout<<"enter the first all elements  :";
+    for(int i=0;i<n;i++){
+       add1[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add1[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"enter the second all elements :";
+    for(int i=0;i<n;i++){
+       add2[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add2[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"sum of two elements           :";
+    for(int i=0;i<n;i++){
+       sum[i]=add1[i]+add2[i];
+    }
+    for(int i=0;i<n;i++){
+       cout<<sum[i]<<" ";
+    }
+    cout<<endl;
+}
+
+//13 solved.......
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    int n,add1[100],add2[100],sum[100];
+    cout<<"enter the number =";
+    cin>>n;
+    cout<<"enter the first all elements  :";
+    for(int i=0;i<n;i++){
+       add1[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add1[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"enter the second all elements :";
+    for(int i=0;i<n;i++){
+       add2[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add2[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"subtract of two elements           :";
+    for(int i=0;i<n;i++){
+       sum[i]=add1[i]-add2[i];
+    }
+    for(int i=0;i<n;i++){
+       cout<<sum[i]<<" ";
+    }
+    cout<<endl;
+}
+*/
+// 14 solved.....
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    int n,add1[100],add2[100],sum[100];
+    cout<<"enter the number =";
+    cin>>n;
+    cout<<"enter the first all elements  :";
+    for(int i=0;i<n;i++){
+       add1[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add1[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"enter the second all elements :";
+    for(int i=0;i<n;i++){
+       add2[i]=rand()%10;
+    }
+    for(int i=0;i<n;i++){
+       cout<<add2[i]<<" ";
+    }
+    cout<<endl<<endl;
+    cout<<"multiply of two elements           :";
+    for(int i=0;i<n;i++){
+       sum[i]=add1[i]*add2[i];
+    }
+    for(int i=0;i<n;i++){
+       cout<<sum[i]<<" ";
+    }
+    cout<<endl;
+}

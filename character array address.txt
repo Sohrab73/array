@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	const int N = 4;
+	char array[N] = { 'a','b','c','d'};
+	//cout << array << endl;
+	cout << (void*)array << endl;
+
+	return 0;
+}
